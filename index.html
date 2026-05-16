@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blurf Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Assets/Icons/Blurf-gallery-icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- NAV-SECTION -->
+     <nav>
+        <div class="logo"><em>Blurf</em> Gallery</div>
+        <div class="nav-right" id="nav-info">24 photos</div>
+     </nav>
+     <!-- NAV-SECTION-END -->
+
+     <!-- HEADER-SECTION -->
+      <div class="page-header">
+        <h1>A quiet place <br>for <em>beautiful</em> things</h1>
+        <p>Browse and explore our collection of stunning images</p>
+      </div>
+      <!-- HEADER-SECTION-END -->
+
+      <!-- CATEGORY FILTERS -->
+      <div class="filters" id="filter">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="nature">Nature</button>
+        <button class="filter-btn" data-cat="architecture">Architecture</button>
+        <button class="filter-btn" data-cat="portrait">Portrait</button>
+        <button class="filter-btn" data-cat="abstract">Abstract</button>
+        <button class="filter-btn" data-cat="travel">Travel</button>
+        <button class="filter-btn" data-cat="urban">Urban</button>
+      </div>
+      <!-- CATEGORY FILTERS-END -->
+
+      <!-- GALLERY-SECTION -->
+       <div class="gallery" id="gallery">
+        <div class="card" data-idx="0" tabindex="0" role="button" aria-label="View Rainforest Canopy">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/forest.jpg" alt="Rainforest Canopy" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Rainforest Canopy</div>
+            <div class="card-cat">Nature</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="1" tabindex="0" role="button" aria-label="View Glass Skyscrapper">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/skyscrapper.jpg" alt="Glass Skyscrapper" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Glass Skyscrapper</div>
+            <div class="card-cat">Architecture</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="2" tabindex="0" role="button" aria-label="View Man Portrait">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/man-portrait.jpg" alt="Man Portrait" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Man Portrait</div>
+            <div class="card-cat">Portrait</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="3" tabindex="0" role="button" aria-label="View Abstract FemaleColorful">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/Abstract-painting.jpg" alt="Abstract FemaleColorful" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Lofy-Face</div>
+            <div class="card-cat">Abstract</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="4" tabindex="0" role="button" aria-label="View Tropical santorini">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/santonari (1).jpg" alt="Tropical santorini" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Tropical santorini</div>
+            <div class="card-cat">Travel</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="5" tabindex="0" role="button" aria-label="View Urban Street">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/by theSQUID 🍟.jpg" alt="Urban Street" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Light Street</div>
+            <div class="card-cat">Urban</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="6" tabindex="0" role="button" aria-label="View Mountain Climb">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/mountain-climb.jpg" alt="Mountain Climb" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Mountain Climb</div>
+            <div class="card-cat">Nature</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="7" tabindex="0" role="button" aria-label="View City Skyline">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/tall building.jpg" alt="City Skyline" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">City Skyline</div>
+            <div class="card-cat">Architecture</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="8" tabindex="0" role="button" aria-label="View Girl-Glowup">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/glowup-portrait.jpg" alt="Girl-Glowup" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Soft-Light</div>
+            <div class="card-cat">Portrait</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="9" tabindex="0" role="button" aria-label="View Color-Field">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/smoke-painting.jpg" alt="Color-Field" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Color-Field</div>
+            <div class="card-cat">Abstract</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="10" tabindex="0" role="button" aria-label="View Hong Kong Street">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/✨ Hong Kong Night Market (Street Food, Lanterns & Vibrant Lights).jpg" alt="Hong Kong Street" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Hong Kong Street</div>
+            <div class="card-cat">Travel</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="11" tabindex="0" role="button" aria-label="View Night Urban">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/Night Market Aerial Print, Colorful City Festival Lights Poster (Digital Download).jpg" alt="Night Urban" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Night-Life</div>
+            <div class="card-cat">Urban</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="12" tabindex="0" role="button" aria-label="View Dog Portrait">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/dog want to play.jpg" alt="Dog Portrait" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Coral Reef</div>
+            <div class="card-cat">Nature</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="13" tabindex="0" role="button" aria-label="View Archi-Dee">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/Luxury Building Design.jpg" alt="Archi-Dee" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Archi-Dee</div>
+            <div class="card-cat">Architecture</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="14" tabindex="0" role="button" aria-label="View Black-Girl-Portrait">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/blk-portrait-girl.jpg" alt="Black-Girl-Portrait" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Black Fusk</div>
+            <div class="card-cat">Portrait</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="15" tabindex="0" role="button" aria-label="View Grid Pattern">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/Abstract-girl-1.jpg" alt="Grid Pattern" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Flux-Abstract</div>
+            <div class="card-cat">Abstract</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="16" tabindex="0" role="button" aria-label="View Santorini Sunset">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/santonari (2).jpg" alt="Santorini Sunset" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Santorini Sunset</div>
+            <div class="card-cat">Travel</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="17" tabindex="0" role="button" aria-label="View Urban Alley">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/building 11.jpg" alt="Urban Alley" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Urban Alley</div>
+            <div class="card-cat">Urban</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="18" tabindex="0" role="button" aria-label="View Infinite">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/Urban Phone Wallpaper Trends for Modern City Aesthetics _.jpg" alt="Infinite" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Infinite</div>
+            <div class="card-cat">Architecture</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="19" tabindex="0" role="button" aria-label="View Lift-Portrait">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/download (portarait)..jpg" alt="Lift-Portrait" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Lift-Portrait</div>
+            <div class="card-cat">Portrait</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="20" tabindex="0" role="button" aria-label="View broken clock">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/clock-cosmos.jpg" alt="broken clock" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">broken clock</div>
+            <div class="card-cat">Abstract</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="21" tabindex="0" role="button" aria-label="View New York">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/New York City,.jpg" alt="New York" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">New York</div>
+            <div class="card-cat">Travel</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="22" tabindex="0" role="button" aria-label="View Piccing Urban">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/Piccinng Urban.jpg" alt="Piccinng Urban" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Piccinng</div>
+            <div class="card-cat">Urban</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+
+        <div class="card" data-idx="23" tabindex="0" role="button" aria-label="View Bird Nature">
+          <div class="card-img">
+            <img src="./Assets/HTML.img/bird-forest.jpg" alt="Bird Nature" loading="lazy">
+          </div>
+          <div class="card-body">
+            <div class="card-title">Redwood Path</div>
+            <div class="card-cat">Nature</div>
+          </div>
+          <div class="card-open"><i class="ph ph-arrows-out-simple"></i></div>
+        </div>
+       </div>
+        <!-- GALLERY-SECTION-END -->
+
+        
+</body>
+</html>
