@@ -331,12 +331,12 @@
               <div class="lb-counter" id="lb-counter"></div>
             </div>
             <div class="lb-filters" id="lb-filters">
-               <button class="lb-pill active" data-fx="none">Original</button>
-               <button class="lb-pill" data-fx="grayscale(100%)">B & W</button>
-               <button class="lb-pill" data-fx="sepia(70%)">Sepia</button>
-               <button class="lb-pill" data-fx="saturate(1.7) contrast(1.05)">Vivid</button>
-               <button class="lb-pill" data-fx="brightness(1.1) saturate(.5)">Faded</button>
-               <button class="lb-pill" data-fx="hue-rotate(160deg) saturate(1.2)">Cool</button>
+               <button type="button" class="lb-pill active" data-fx="none">Original</button>
+               <button type="button" class="lb-pill" data-fx="grayscale(100%)">B & W</button>
+               <button type="button" class="lb-pill" data-fx="sepia(70%)">Sepia</button>
+               <button type="button" class="lb-pill" data-fx="saturate(1.7) contrast(1.05)">Vivid</button>
+               <button type="button" class="lb-pill" data-fx="brightness(1.1) saturate(.5)">Faded</button>
+               <button type="button" class="lb-pill" data-fx="hue-rotate(160deg) saturate(1.2)">Cool</button>
             </div>
 
             
@@ -536,7 +536,9 @@
           }
 
           function setFx(fx) {
-            document.getElementById('lb-img').style.filter = fx === 'none' ? '' : fx;
+            const img = document.getElementById('lb-img');
+            img.style.filter = fx === 'none' ? '' : fx;
+            img.style.webkitFilter = fx === 'none' ? '' : fx;
             document.querySelectorAll('.lb-pill').forEach(p => p.classList.toggle('active', p.dataset.fx === fx));
           }
 
@@ -556,10 +558,15 @@
             render();
           });
 
-          document.getElementById('lb-filters').addEventListener('click', e => {
+          function handleLbFilterEvent(e) {
             const pill = e.target.closest('.lb-pill');
-            if (pill) setFx(pill.dataset.fx);
-          });
+            if (!pill) return;
+            e.preventDefault();
+            setFx(pill.dataset.fx);
+          }
+
+          document.getElementById('lb-filters').addEventListener('click', handleLbFilterEvent);
+          document.getElementById('lb-filters').addEventListener('pointerup', handleLbFilterEvent);
 
           document.getElementById('lb-prev').addEventListener('click', () => {lbIdx--; syncLb();});
           document.getElementById('lb-next').addEventListener('click', () => {lbIdx++; syncLb();});

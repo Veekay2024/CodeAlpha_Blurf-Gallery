@@ -318,6 +318,7 @@ nav {
   max-height: 60vh;
   object-fit: contain;
   display: block;
+  -webkit-filter: var(--lb-fx, none);
   filter: var(--lb-fx, none);
   transition: opacity .2s, filter .3s;
 }
