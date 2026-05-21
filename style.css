@@ -185,6 +185,13 @@ nav {
   object-fit: cover;
   display: block;
   transition: transform .5s ease;
+  will-change: transform;
+  contain: strict;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
 
 .card:hover .card-img img {
@@ -321,6 +328,8 @@ nav {
   -webkit-filter: var(--lb-fx, none);
   filter: var(--lb-fx, none);
   transition: opacity .2s, filter .3s;
+  will-change: filter, opacity;
+  contain: layout style paint;
 }
 
 /* Nav Arrows */

@@ -602,7 +602,23 @@
             });
           
           // -- TOUCH-SWIPE-END --
+          
+          // Optimize image loading - preload visible images on idle
+          function optimizeImageLoading() {
+            if ('requestIdleCallback' in window) {
+              requestIdleCallback(() => {
+                const imgs = document.querySelectorAll('.card-img img');
+                imgs.forEach(img => {
+                  if (img.dataset.src && !img.src) {
+                    img.src = img.dataset.src;
+                  }
+                });
+              }, { timeout: 2000 });
+            }
+          }
+          
           render();
+          optimizeImageLoading();
         </script>
         
         
